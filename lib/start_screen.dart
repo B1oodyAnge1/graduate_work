@@ -15,12 +15,41 @@ class _StartScreen extends State<StartScreen> {
     return Stack(
       children: [
         Positioned(
+          child: Container(
+            color: Colors.white,
+            width: myWidth,
+            height: myHeight,
+          ),
+        ),
+        Positioned(
             top: 0,
             child: Container(
-              color: Colors.red,
+              color: Colors.green,
               width: myWidth,
               height: 70,
-            ))
+            )),
+        Positioned(
+          bottom: 10,
+          right: 10,
+          child: GestureDetector(
+            onTap: () {},
+            child: Container(
+              padding: const EdgeInsets.all(15),
+              decoration: const BoxDecoration(
+                color: Colors.green,
+                borderRadius: BorderRadius.all(Radius.circular(300)),
+              ),
+              child: const Text(
+                "QR",
+                style: TextStyle(
+                  decoration: TextDecoration.none,
+                  color: Colors.black,
+                  fontSize: 30,
+                ),
+              ),
+            ),
+          ),
+        )
       ],
     );
   }
